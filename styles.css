@@ -1,0 +1,67 @@
+button{
+    background-color: gold; border-radius: 15px;display: block;margin: auto;
+}
+button:hover{
+background-color: blueviolet;
+}
+img{
+    border: solid 10px black ;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0.3, 0, 0.8);
+}
+li{
+    list-style: none;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100hv;
+    background-color: cyan;
+}
+.accordion{
+    width: 880px;
+}
+.accordion .contentBx{
+    position:relative;
+    margin:10px 20px;
+}
+.accordion .contentBx h1,h2{
+    position: relative;
+    padding: 10px;
+    background-color: aquamarine;
+    color: #fff;
+    cursor: pointer;
+}
+.accordion .contentBx h1,h2::before{
+    content:'+';
+    position:absolute;
+    top: 50%;
+    right: 20px;  
+    transform: translatey(-50%);
+    font-size: 1.5em;
+}
+.accordion .contentBx.active h1,h2::before{
+content:'-';
+
+}
+.accordion .contentBx,.content {
+    position: relative;
+    background-color: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: 0.1s;
+    overflow-y:auto ;
+   
+}
+.accordion .contentBx.active,.content{
+    height: 150px;
+    padding: 10px;
+    overflow: visible;
+    transition: 0.1s;
+    overflow-y:auto ;
+}
